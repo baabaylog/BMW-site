@@ -1,0 +1,11 @@
+
+
+@media screen and (max-width:768px) {
+    .banner-sec {
+        height: 100vh;
+        position: relative;
+        }
+        .nav-content::after{
+        display: none;
+        }
+}

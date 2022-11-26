@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    font-family: BMWTypeNextLatin, Helvetica, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
+    font-weight: 400;
+}
+
+:root {
+    --main-color: white
+}
+
+/* ____________________________________________ NAVBAR SECTION ___________________________________ */
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 33;
+
+}
+
+.nav-text {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#navbarSupportedContent {
+    width: 50%;
+}
+
+#navbarSupportedContent ion-icon {
+    font-size: 1.5rem;
+}
+
+
+
+.navbar-nav li a {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: white;
+    margin: 0 0.5rem;
+    padding: auto 0.5rem;
+    position: relative;
+}
+
+.navbar-nav li a:hover:after {
+
+    background-color: #0653b6;
+}
+
+.navbar-nav li a::after {
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -70%;
+    left: -2px;
+    z-index: 3333;
+}
+
+.navbar-nav li a:hover::after {
+    background-color: #0653b6;
+    width: 110%;
+}
+
+.navbar-nav li a:hover {
+    color: #0653b6;
+}
+
+#navbarSupportedContent .search {
+    position: relative;
+}
+
+.country {
+    font-size: 0.7rem;
+}
+
+#navbarSupportedContent .search::after {
+    content: '';
+    width: 1px;
+    height: 75%;
+    top: 0%;
+    left: 180%;
+    position: absolute;
+    background-color: white;
+}
+
+#navbarSupportedContent .logo {
+    margin: 1rem 1.5rem;
+}
+
+.nav-content::after {
+    content: '';
+    width: 41rem;
+    bottom: 50%;
+    height: 1px;
+    position: absolute;
+    background-color: white;
+}
+
+/* _______________________________________________ BANNER GRID SECTION   ___________________________________  */
+.banner-grid-sec .video-container div {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-grid-sec .video-container :nth-child(2) {
+    height: 100vh;
+    width: 100%;
+}
+
+.banner-grid-sec video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    transition: all 4s linear;
+
+}
+
+
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.03));
+    transition: all 4s ease-in-out;
+}
+
+.banner-sec:hover .video-container::after {
+    background-color: rgba(0, 0, 0, 0.527);
+    -webkit-transition: background-color 1500ms ease-out;
+    -ms-transition: background-color 1500ms ease-out;
+    transition: background-color 1500ms ease-out;
+
+}
+
+/*   BANNER SECTION   */
+.banner-sec {
+    height: 80vh;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.banner-sec::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+}
+
+.banner-sec:hover .video-fluid {
+    transform: scale(1.2);
+}
+
+.banner-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    z-index: 22;
+}
+
+.banner-text-inner .text-tag {
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+.banner-text-inner h5 {
+    color: white;
+    font-size: 60px;
+    text-transform: capitalize;
+    line-height: 72px;
+    margin-left: 3px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    color: white;
+    border: 2px solid white;
+    width: 11rem;
+    font-size: 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 550;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* _______________________________________  BANNER GRID SECTION ______________________________ */
+
+.text-1 {
+    z-index: 222;
+}
+
+.grid-1-text {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    transition: all 0.3s linear;
+    z-index: 2;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-container img {
+    transition: all 3s ease;
+    z-index: -1;
+}
+
+.grid-1-text:hover+.img-container img {
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+.grid-2-text:hover+.img-container img {
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+/* fade effect */
+.grid-1-text::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    transition: all 4s ease-in-out;
+    z-index: -22;
+}
+
+.grid-1-text:hover::before {
+
+    background-color: rgba(0, 0, 0, 0.55);
+    -webkit-transition: background-color 1500ms ease-out;
+    -ms-transition: background-color 1500ms ease-out;
+    transition: background-color 1500ms ease-out;
+}
+
+.grid-2-text {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    transition: all 0.3s linear;
+    z-index: 2;
+}
+
+
+
+/* fade effect */
+.grid-2-text::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    transition: all 4s ease-in-out;
+    z-index: -22;
+}
+
+.grid-2-text:hover::before {
+    background-color: rgba(0, 0, 0, 0.55);
+    -webkit-transition: background-color 1500ms ease-out;
+    -ms-transition: background-color 1500ms ease-out;
+    transition: background-color 1500ms ease-out;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+.grid-sec .container-fluid::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    z-index: 33;
+}
+
+.grid-sec .grid-inner .grid-tag {
+    font-size: 25px;
+    line-height: 45px;
+    margin-bottom: 10px;
+
+}
+
+.grid-sec .grid-inner h4 {
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 30px;
+
+}
+
+.grid-sec .grid-inner a {
+    line-height: 46px;
+}
+
+.grid-inner {
+    position: relative;
+}
+
+.grid-inner-1::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    color: white;
+    z-index: 33;
+}
+
+.podcast-slider-sec .container-fluid {
+    background-color: #262626;
+
+}
+
+.podcast-text .text-inner h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.podcast-text .text-inner p {
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* PODCAST SLIDES */
+.slide {
+    position: relative;
+    /* height: 25rem; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    z-index: 22;
+}
+
+.slide-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.03);
+    transition: all 3s ease;
+    z-index: -2;
+}
+
+.slide:hover .slide-text::before {
+    background-color: rgba(0, 0, 0, 0.72);
+    -webkit-transition: background-color 1500ms ease-out;
+    -ms-transition: background-color 1500ms ease-out;
+    transition: background-color 1500ms ease-out;
+}
+
+.inner-podcast-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 0 10px 0;
+}
+
+.inner-podcast-text ion-icon {
+    font-size: 1.6rem;
+}
+
+.inner-podcast-text h5 {
+    font-size: 1.2rem;
+}
+
+.slide img {
+    z-index: -2;
+    height: 100%;
+    transition: all 4s ease;
+}
+
+.slide video {
+    z-index: -2;
+    height: 100%;
+    transition: all 4s ease;
+}
+
+.slide:hover .podcast-img {
+    transform: scale(1.2);
+}
+
+.slide:hover .podcast-video {
+    transform: scale(1.2);
+}
+
+/* ________________________________________________ MODEL INNER ____________________________________________ */
+
+.model-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-inner p {
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.model-inner h2 {
+    font-size: 5rem;
+
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.model-inner .model-btn {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    display: flex;
+}
+
+.model-inner .icons {
+    position: relative;
+}
+
+.model-inner .icons ion-icon {
+    position: absolute;
+    left: -2rem;
+    bottom: 8px;
+    font-weight: 800;
+    font-size: 1.8rem;
+    --ionicon-stroke-width: 250px;
+}
+
+/* ___________________________________________ LEGEND SECTION _____________________________________________________ */
+
+/* UTILITY CLASSES FOR ALL GRIDS text BELOW */
+.text-inner h5 {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 5%;
+}
+
+.text-inner b {
+    font-size: 15px;
+    line-height: 22px;
+    
+}
+
+.grids-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    z-index: 33;
+}
+.grids-inner{
+    position: relative;
+}
+.grids-text::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.03);
+    transition: all 4s ease;
+    z-index: -1;
+}
+.grids-text:hover::before{
+    background-color: rgba(0, 0, 0, 0.516);
+    -webkit-transition: background-color 1500ms ease-out;
+    -ms-transition: background-color 1500ms ease-out;
+    transition: background-color 1500ms ease-out;
+}
+.grids-img{
+    overflow: hidden;
+}
+.img-fluid{
+    transition: all 3s linear;
+    z-index: -2;
+}
+.grids-text:hover + .grids-img img{
+    transform: scale(1.12);
+}
+.text-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+.dream-drive-sec .grid-line-right::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right: 0;
+    /* top: 0; */
+    bottom: 0;
+    background-color: white;
+    z-index: 2222;
+}
+
+.legend-grid-sec .grid-line-right::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right: 0;
+    /* top: 0; */
+    bottom: 0;
+    background-color: white;
+    z-index: 2222;
+}
+.legend-grid-sec .grid-line-bottom::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 2px;
+    right: 0;
+    /* top: 0; */
+    bottom: 0;
+    background-color: white;
+    z-index: 2222;
+}
+.dream-drive-sec .grid-line-bottom::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 2px;
+    right: 0;
+    /* top: 0; */
+    bottom: 0;
+    background-color: white;
+    z-index: 2222;
+}
+.audio-column-sec .grid-line-bottom::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 2px;
+    /* right: 0; */
+    /* top: 0; */
+    bottom: 0;
+    background-color: white;
+    z-index: 2222;
+}
+.audio-column-sec .grid-line-right::after{
+    content: '';
+    position: absolute;
+    width:2px;
+    height: 100%;
+    /* bottom: 0; */
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2222;
+}
